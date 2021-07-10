@@ -1,6 +1,17 @@
 import styled from 'styled-components';
 
 export const StyledForm = styled.form`
+	position: relative;
+	width: 100%;
+	max-width: 500px;
+	color: white;
+
+	&.loading {
+		input {
+			opacity: 0.5;
+		}
+	}
+
 	input,
 	button {
 		font-family: inherit;
@@ -11,16 +22,14 @@ export const StyledForm = styled.form`
 		width: 0;
 		height: 0;
 		opacity: 0;
-		visibility: hidden;
 		position: absolute;
 		left: -1vw;
 	}
 
 	input {
 		padding: 1em 1.25em;
-		color: white;
+		color: inherit;
 		width: 100%;
-		max-width: 500px;
 		border-radius: 3em;
 		border: 2px solid var(--primary);
 		background-color: rgba(255, 255, 255, 0.1);

@@ -1,12 +1,28 @@
 import { Dispatch } from 'redux';
-import { SEARCH_CITY, IAction } from '../types';
+import { SEARCH_CITY, IActionError, IActionLoading, LOADING, ERROR, ActionType } from '../types';
 
-const apiKey = '4ae2636d8dfbdc3044bede63951a019b';
+export const setLoading = () => {
+	return (dispatch: Dispatch<IActionLoading>) => {
+		dispatch({
+			type: LOADING,
+		});
+	};
+};
+
+export const setError = () => {
+	return (dispatch: Dispatch<IActionError>) => {
+		dispatch({
+			type: ERROR,
+		});
+	};
+};
 
 export const searchCity = (cityName: string) => {
-	return (dispatch: Dispatch<IAction>) => {
+	return (dispatch: Dispatch<ActionType>) => {
+		dispatch({ type: LOADING });
+
 		fetch(
-			`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric&lang=es`
+			`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${process.env.REACT_APP_API_KEY}&units=metric&lang=es`
 		)
 			.then((res) => res.json())
 			.then((data) => {
@@ -22,6 +38,9 @@ export const searchCity = (cityName: string) => {
 					type: SEARCH_CITY,
 					payload: foundCity,
 				});
+			})
+			.catch((err) => {
+				dispatch({ type: ERROR });
 			});
 	};
 };

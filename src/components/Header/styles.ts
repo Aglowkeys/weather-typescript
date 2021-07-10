@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { fadein } from '../../utils/animations';
 
 export const StyledHeader = styled.header`
 	position: absolute;
@@ -27,5 +28,17 @@ export const StyledHeader = styled.header`
 		@media (max-width: 450px) {
 			font-size: 3em;
 		}
+	}
+
+	.error-message {
+		width: fit-content;
+		background-color: #fce5ec;
+		color: #8f002b;
+		font-size: 0.85em;
+		font-weight: bold;
+		padding: 1em 2em;
+		margin-top: 1em;
+		border-radius: 0.4em;
+		animation: ${fadein} 1s forwards;
 	}
 `;

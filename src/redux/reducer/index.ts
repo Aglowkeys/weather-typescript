@@ -1,7 +1,8 @@
-import { IState, IAction, SEARCH_CITY, LOADING } from '../types';
+import { IState, ActionType, SEARCH_CITY, LOADING, ERROR } from '../types';
 
 const initialState: IState = {
 	loading: false,
+	error: false,
 	city: {
 		name: '',
 		country: '',
@@ -11,7 +12,7 @@ const initialState: IState = {
 	},
 };
 
-const reducer = (state: IState = initialState, action: IAction) => {
+const reducer = (state: IState = initialState, action: ActionType) => {
 	switch (action.type) {
 		case LOADING:
 			return {
@@ -22,8 +23,16 @@ const reducer = (state: IState = initialState, action: IAction) => {
 		case SEARCH_CITY:
 			return {
 				...state,
+				error: false,
 				loading: false,
 				city: action.payload,
+			};
+
+		case ERROR:
+			return {
+				...state,
+				error: true,
+				loading: false,
 			};
 
 		default:
