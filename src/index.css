@@ -1,13 +1,58 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200..900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+	--primary: rgb(132, 236, 188);
+	--secondary: rgb(174, 238, 122);
+}
+
+body {
+	font-family: Inter, sans-serif;
+	background: url(https://images.unsplash.com/photo-1531504060587-e6811129c0f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80)
+		no-repeat top center;
+	background-size: cover;
+	color: white;
+}
+
+.App {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 3em;
+}
+
+h1 {
+	font-size: 4em;
+	text-transform: uppercase;
+	font-weight: 900;
+	margin-bottom: 0.2em;
+	width: fit-content;
+	color: transparent;
+	background: linear-gradient(160deg, var(--primary), var(--secondary));
+	background-clip: text;
+	-webkit-background-clip: text;
+	line-height: 1;
+}
+
+::-webkit-input-placeholder,
+::-ms-input-placeholder {
+	color: inherit;
+	opacity: 0.6;
+}
+
+::placeholder {
+	color: inherit;
+	opacity: 0.6;
+}
+
+@media (max-width: 500px) {
+	h1 {
+		font-size: 3em;
+	}
 }
