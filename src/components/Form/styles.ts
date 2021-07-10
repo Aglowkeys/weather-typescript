@@ -32,8 +32,9 @@ export const StyledForm = styled.form`
 
 	input:focus {
 		background-color: rgba(140, 243, 209, 0.3);
-		box-shadow: -10px -10px 25px rgba(63, 133, 213, 0.3), 15px -5px 30px rgba(63, 213, 171, 0.5),
-			-10px 10px 30px rgba(151, 0, 255, 0.3);
+		box-shadow: -10px -10px 25px rgba(63, 133, 213, 0.3), -10px 10px 30px rgba(151, 0, 255, 0.2),
+			15px -5px 30px rgba(63, 213, 171, 0.4);
 		outline: none;
+		border-color: var(--secondary);
 	}
 `;
