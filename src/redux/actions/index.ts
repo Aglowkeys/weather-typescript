@@ -14,11 +14,10 @@ export const searchCity = (cityName: string) => {
 					name: data.name,
 					country: data.sys.country,
 					min: data.main.temp_min,
-					max: data.main.temp_min,
+					max: data.main.temp_max,
 					weather: data.weather[0].description,
 				};
 
-				console.log(`foundCity`, foundCity);
 				dispatch({
 					type: SEARCH_CITY,
 					payload: foundCity,

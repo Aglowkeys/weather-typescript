@@ -1,17 +1,30 @@
-import { IState, IAction, SEARCH_CITY } from '../types';
+import { IState, IAction, SEARCH_CITY, LOADING } from '../types';
 
 const initialState: IState = {
-	name: '',
-	country: '',
-	min: '',
-	max: '',
-	weather: '',
+	loading: false,
+	city: {
+		name: '',
+		country: '',
+		min: '',
+		max: '',
+		weather: '',
+	},
 };
 
 const reducer = (state: IState = initialState, action: IAction) => {
 	switch (action.type) {
+		case LOADING:
+			return {
+				...state,
+				loading: true,
+			};
+
 		case SEARCH_CITY:
-			return action.payload;
+			return {
+				...state,
+				loading: false,
+				city: action.payload,
+			};
 
 		default:
 			return state;

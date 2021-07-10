@@ -1,6 +1,7 @@
 export const SEARCH_CITY = 'SEARCH_CITY';
+export const LOADING = 'LOADING';
 
-export interface IState {
+export interface ICity {
 	name: string;
 	country: string;
 	min: string;
@@ -9,6 +10,11 @@ export interface IState {
 }
 
 export interface IAction {
-	type: typeof SEARCH_CITY;
-	payload: IState;
+	type: string;
+	payload: ICity;
+}
+
+export interface IState {
+	loading: boolean;
+	city: ICity;
 }

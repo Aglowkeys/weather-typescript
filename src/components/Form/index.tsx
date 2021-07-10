@@ -10,6 +10,7 @@ const Form = () => {
 	const handleSubmit = (ev: React.FormEvent<HTMLFormElement>) => {
 		ev.preventDefault();
 		dispatch(searchCity(cityName));
+		setCityName('');
 	};
 
 	return (
