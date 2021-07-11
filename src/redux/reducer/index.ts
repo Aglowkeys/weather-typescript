@@ -6,8 +6,9 @@ const initialState: IState = {
 	city: {
 		name: '',
 		country: '',
-		min: '',
-		max: '',
+		flag: '',
+		min: 0,
+		max: 0,
 		weather: '',
 	},
 };

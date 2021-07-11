@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { searchCity } from '../../redux/actions';
-import { StyledForm } from './styles';
 import { RootState } from '../../redux/store';
+import { StyledForm } from './styles';
 import Spinner from '../Spinner';
 
 const Form = () => {

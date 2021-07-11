@@ -32,13 +32,19 @@ export const StyledHeader = styled.header`
 
 	.error-message {
 		width: fit-content;
-		background-color: #fce5ec;
-		color: #8f002b;
+		display: flex;
+		align-items: center;
+		margin-top: 1.5em;
+		color: #fce5ec;
 		font-size: 0.85em;
 		font-weight: bold;
-		padding: 1em 2em;
-		margin-top: 1em;
 		border-radius: 0.4em;
 		animation: ${fadein} 1s forwards;
+
+		svg {
+			width: 2em;
+			height: 2em;
+			margin-right: 1em;
+		}
 	}
 `;

@@ -5,8 +5,9 @@ export const ERROR = 'ERROR';
 export interface ICity {
 	name: string;
 	country: string;
-	min: string;
-	max: string;
+	flag: '';
+	min: number;
+	max: number;
 	weather: string;
 }
 

@@ -4,11 +4,11 @@ import Header from './components/Header';
 import { RootState } from './redux/store';
 
 const App = () => {
-	const { error } = useSelector((state: RootState) => state);
+	const { error, city } = useSelector((state: RootState) => state);
 	return (
 		<div className='App'>
 			<Header />
-			{!error && <City />}
+			{!error && city.name && <City />}
 		</div>
 	);
 };
