@@ -37,3 +37,22 @@ body {
 	color: inherit;
 	opacity: 0.6;
 }
+
+.icon-github {
+	position: absolute;
+	top: 0.5em;
+	right: 0.5em;
+	font-size: 2em;
+	color: var(--secondary);
+}
+.icon-github a {
+	color: currentColor;
+	transition: 300ms ease;
+}
+
+.icon-github a:hover,
+.icon-github a:focus {
+	outline: none;
+	color: var(--primary);
+	text-shadow: 0 0 20px var(--secondary);
+}
