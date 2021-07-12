@@ -12,6 +12,18 @@ export const StyledForm = styled.form`
 		}
 	}
 
+	&::after {
+		content: '\f002';
+		position: absolute;
+		top: 50%;
+		left: 1.25em;
+		transform: translateY(-50%);
+		font-family: 'Font Awesome 5 Pro';
+		font-weight: 400;
+		font-size: 1em;
+		color: var(--primary);
+	}
+
 	input,
 	button {
 		font-family: inherit;
@@ -27,7 +39,7 @@ export const StyledForm = styled.form`
 	}
 
 	input {
-		padding: 1em 1.25em;
+		padding: 1em 1.25em 1em 4em;
 		color: inherit;
 		width: 100%;
 		border-radius: 3em;

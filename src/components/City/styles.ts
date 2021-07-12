@@ -23,6 +23,7 @@ export const StyledCity = styled.section`
 
 	.card__header {
 		padding: 2em;
+		padding-left: 0;
 
 		.city {
 			font-size: 3em;
