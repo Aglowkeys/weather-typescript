@@ -3,6 +3,10 @@ import { fadein } from '../../utils/animations';
 
 export const StyledCity = styled.section`
 	display: flex;
+	position: absolute;
+	top: 40%;
+	/* transform: translateY(-100%); */
+	text-shadow: 0 0 30px rgba(0, 0, 0, 0.6), 0 0 10px rgba(0, 0, 0, 0.3);
 
 	@media (max-width: 600px) {
 		flex-direction: column;
@@ -14,7 +18,7 @@ export const StyledCity = styled.section`
 	}
 
 	&.fadein {
-		animation: ${fadein} 1s forwards;
+		animation: ${fadein} 1.5s forwards;
 	}
 
 	.card__header {

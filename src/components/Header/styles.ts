@@ -7,6 +7,7 @@ export const StyledHeader = styled.header`
 	right: 3em;
 	top: 50%;
 	transform: translateY(-50%);
+	transition: 1s ease;
 
 	&.top {
 		top: 3em;

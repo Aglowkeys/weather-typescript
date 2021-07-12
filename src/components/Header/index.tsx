@@ -5,10 +5,10 @@ import { RootState } from '../../redux/store';
 import Exclamation from '../Exclamation';
 
 const Header = () => {
-	const { error } = useSelector((state: RootState) => state);
+	const { error, city } = useSelector((state: RootState) => state);
 
 	return (
-		<StyledHeader>
+		<StyledHeader className={city.name ? 'top' : ''}>
 			<h1>Weather App</h1>
 			<Form />
 			{error && (
